@@ -1,0 +1,317 @@
+{
+  "model_name": "Local Tiny ECG Transformer baseline",
+  "checkpoint": "04_Model_Software\\third_party_models\\TinyTransformer\\software\\training_attempt_20261024\\baseline_ecg_transformer.weights.h5",
+  "parameter_count": 6643,
+  "classes_in_output_order": [
+    "N",
+    "S",
+    "V",
+    "F",
+    "Q"
+  ],
+  "input": {
+    "ecg_samples": 198,
+    "rr_features": 2,
+    "sampling_rate_hz": 360,
+    "patch_count": 66
+  },
+  "architecture": {
+    "attention_heads": 8,
+    "key_dimension_per_head": 2,
+    "embedding_dimension": 16,
+    "feed_forward_dimension": 128,
+    "encoder_layers": 1,
+    "convolution_kernel": 3,
+    "convolution_stride": 3
+  },
+  "quantization": {
+    "status": "not_quantized",
+    "note": "Use this FP32 export as source data; calibrate activation scales before integer deployment."
+  },
+  "tensors": [
+    {
+      "array_key": "layer_01_tensor_00",
+      "layer_index": 1,
+      "layer_name": "conv2d",
+      "layer_type": "Conv2D",
+      "variable_name": "conv2d/kernel",
+      "shape": [
+        3,
+        1,
+        1,
+        16
+      ],
+      "dtype": "float32"
+    },
+    {
+      "array_key": "layer_01_tensor_01",
+      "layer_index": 1,
+      "layer_name": "conv2d",
+      "layer_type": "Conv2D",
+      "variable_name": "conv2d/bias",
+      "shape": [
+        16
+      ],
+      "dtype": "float32"
+    },
+    {
+      "array_key": "layer_03_tensor_00",
+      "layer_index": 3,
+      "layer_name": "posembed_input",
+      "layer_type": "AddPositionEmbs",
+      "variable_name": "posembed_input/pos_embedding",
+      "shape": [
+        1,
+        66,
+        16
+      ],
+      "dtype": "float32"
+    },
+    {
+      "array_key": "layer_05_tensor_00",
+      "layer_index": 5,
+      "layer_name": "layer_normalization",
+      "layer_type": "LayerNormalization",
+      "variable_name": "layer_normalization/gamma",
+      "shape": [
+        16
+      ],
+      "dtype": "float32"
+    },
+    {
+      "array_key": "layer_05_tensor_01",
+      "layer_index": 5,
+      "layer_name": "layer_normalization",
+      "layer_type": "LayerNormalization",
+      "variable_name": "layer_normalization/beta",
+      "shape": [
+        16
+      ],
+      "dtype": "float32"
+    },
+    {
+      "array_key": "layer_06_tensor_00",
+      "layer_index": 6,
+      "layer_name": "multi_head_attention",
+      "layer_type": "MultiHeadAttention",
+      "variable_name": "multi_head_attention/query/kernel",
+      "shape": [
+        16,
+        8,
+        2
+      ],
+      "dtype": "float32"
+    },
+    {
+      "array_key": "layer_06_tensor_01",
+      "layer_index": 6,
+      "layer_name": "multi_head_attention",
+      "layer_type": "MultiHeadAttention",
+      "variable_name": "multi_head_attention/query/bias",
+      "shape": [
+        8,
+        2
+      ],
+      "dtype": "float32"
+    },
+    {
+      "array_key": "layer_06_tensor_02",
+      "layer_index": 6,
+      "layer_name": "multi_head_attention",
+      "layer_type": "MultiHeadAttention",
+      "variable_name": "multi_head_attention/key/kernel",
+      "shape": [
+        16,
+        8,
+        2
+      ],
+      "dtype": "float32"
+    },
+    {
+      "array_key": "layer_06_tensor_03",
+      "layer_index": 6,
+      "layer_name": "multi_head_attention",
+      "layer_type": "MultiHeadAttention",
+      "variable_name": "multi_head_attention/key/bias",
+      "shape": [
+        8,
+        2
+      ],
+      "dtype": "float32"
+    },
+    {
+      "array_key": "layer_06_tensor_04",
+      "layer_index": 6,
+      "layer_name": "multi_head_attention",
+      "layer_type": "MultiHeadAttention",
+      "variable_name": "multi_head_attention/value/kernel",
+      "shape": [
+        16,
+        8,
+        2
+      ],
+      "dtype": "float32"
+    },
+    {
+      "array_key": "layer_06_tensor_05",
+      "layer_index": 6,
+      "layer_name": "multi_head_attention",
+      "layer_type": "MultiHeadAttention",
+      "variable_name": "multi_head_attention/value/bias",
+      "shape": [
+        8,
+        2
+      ],
+      "dtype": "float32"
+    },
+    {
+      "array_key": "layer_06_tensor_06",
+      "layer_index": 6,
+      "layer_name": "multi_head_attention",
+      "layer_type": "MultiHeadAttention",
+      "variable_name": "multi_head_attention/attention_output/kernel",
+      "shape": [
+        8,
+        2,
+        16
+      ],
+      "dtype": "float32"
+    },
+    {
+      "array_key": "layer_06_tensor_07",
+      "layer_index": 6,
+      "layer_name": "multi_head_attention",
+      "layer_type": "MultiHeadAttention",
+      "variable_name": "multi_head_attention/attention_output/bias",
+      "shape": [
+        16
+      ],
+      "dtype": "float32"
+    },
+    {
+      "array_key": "layer_08_tensor_00",
+      "layer_index": 8,
+      "layer_name": "layer_normalization_1",
+      "layer_type": "LayerNormalization",
+      "variable_name": "layer_normalization_1/gamma",
+      "shape": [
+        16
+      ],
+      "dtype": "float32"
+    },
+    {
+      "array_key": "layer_08_tensor_01",
+      "layer_index": 8,
+      "layer_name": "layer_normalization_1",
+      "layer_type": "LayerNormalization",
+      "variable_name": "layer_normalization_1/beta",
+      "shape": [
+        16
+      ],
+      "dtype": "float32"
+    },
+    {
+      "array_key": "layer_09_tensor_00",
+      "layer_index": 9,
+      "layer_name": "dense",
+      "layer_type": "Dense",
+      "variable_name": "dense/kernel",
+      "shape": [
+        16,
+        128
+      ],
+      "dtype": "float32"
+    },
+    {
+      "array_key": "layer_09_tensor_01",
+      "layer_index": 9,
+      "layer_name": "dense",
+      "layer_type": "Dense",
+      "variable_name": "dense/bias",
+      "shape": [
+        128
+      ],
+      "dtype": "float32"
+    },
+    {
+      "array_key": "layer_11_tensor_00",
+      "layer_index": 11,
+      "layer_name": "dense_1",
+      "layer_type": "Dense",
+      "variable_name": "dense_1/kernel",
+      "shape": [
+        128,
+        16
+      ],
+      "dtype": "float32"
+    },
+    {
+      "array_key": "layer_11_tensor_01",
+      "layer_index": 11,
+      "layer_name": "dense_1",
+      "layer_type": "Dense",
+      "variable_name": "dense_1/bias",
+      "shape": [
+        16
+      ],
+      "dtype": "float32"
+    },
+    {
+      "array_key": "layer_14_tensor_00",
+      "layer_index": 14,
+      "layer_name": "encoder_norm",
+      "layer_type": "LayerNormalization",
+      "variable_name": "encoder_norm/gamma",
+      "shape": [
+        16
+      ],
+      "dtype": "float32"
+    },
+    {
+      "array_key": "layer_14_tensor_01",
+      "layer_index": 14,
+      "layer_name": "encoder_norm",
+      "layer_type": "LayerNormalization",
+      "variable_name": "encoder_norm/beta",
+      "shape": [
+        16
+      ],
+      "dtype": "float32"
+    },
+    {
+      "array_key": "layer_17_tensor_00",
+      "layer_index": 17,
+      "layer_name": "dense_2",
+      "layer_type": "Dense",
+      "variable_name": "dense_2/kernel",
+      "shape": [
+        2,
+        2
+      ],
+      "dtype": "float32"
+    },
+    {
+      "array_key": "layer_19_tensor_00",
+      "layer_index": 19,
+      "layer_name": "head",
+      "layer_type": "Dense",
+      "variable_name": "head/kernel",
+      "shape": [
+        18,
+        5
+      ],
+      "dtype": "float32"
+    },
+    {
+      "array_key": "layer_19_tensor_01",
+      "layer_index": 19,
+      "layer_name": "head",
+      "layer_type": "Dense",
+      "variable_name": "head/bias",
+      "shape": [
+        5
+      ],
+      "dtype": "float32"
+    }
+  ]
+}

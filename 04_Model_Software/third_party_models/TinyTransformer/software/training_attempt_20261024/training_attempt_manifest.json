@@ -1,0 +1,43 @@
+{
+  "attempt": 1,
+  "status": "completed",
+  "started_at_utc": "2026-10-24T07:18:30.522246+00:00",
+  "notebook": "Baseline Tiny Transformer (Software).ipynb",
+  "training_from_scratch": true,
+  "training_configuration": {
+    "epochs_max": 100,
+    "batch_size": 128,
+    "learning_rate": 0.002,
+    "early_stopping_patience": 25,
+    "random_seed": 42,
+    "monitor": "validation accuracy",
+    "class_weighting": "not applied; matches upstream baseline training code",
+    "parameters": 6643
+  },
+  "saved_split": {
+    "file": "consistent_data_splits.npz",
+    "sha256": "e70fe41d6183b1bd13dedecb117a0d6eb1af9912f616544b65bf9b895327a3c4",
+    "train_beats": 70471,
+    "validation_beats": 10067,
+    "test_beats": 20136,
+    "protocol": "stratified beat-level 70/10/20; same saved membership"
+  },
+  "environment": {
+    "python": "3.13.15 (tags/v3.13.15:4061bc4, Aug  5 2026, 13:05:39) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "tensorflow": "2.21.0",
+    "devices": [
+      "PhysicalDevice(name='/physical_device:CPU:0', device_type='CPU')"
+    ]
+  },
+  "output_weights": "training_attempt_20261024\\baseline_ecg_transformer.weights.h5",
+  "output_results": "training_attempt_20261024\\baseline_results.json",
+  "completed_at_utc": "2026-10-24T07:57:20.315230+00:00",
+  "best_validation_epoch": 75,
+  "best_validation_accuracy": 0.9870865345001221,
+  "test_accuracy": 0.9863428684942391,
+  "test_macro_f1": 0.7243886425566272,
+  "training_seconds": 2200.2831687,
+  "weights_sha256": "0ea26cf3c359faa338a0909e3e0c3097d58ce2dc3d1871aada03ec26490d2c8b",
+  "postprocessing_note": "Training and test evaluation completed and were saved. The original interactive chart display was interrupted after it blocked; both plots were regenerated with a noninteractive backend."
+}

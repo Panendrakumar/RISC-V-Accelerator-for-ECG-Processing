@@ -1,0 +1,70 @@
+
+There are no discarded input sections
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+BRAM             0x00000000         0x00008000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.text           0x00000000       0xe4
+ *(.text.start)
+ .text.start    0x00000000       0x34 <tmp>\ccsTO2oi.o
+                0x00000000                _start
+ *(.text .text.*)
+ .text          0x00000034        0x0 <tmp>\ccsTO2oi.o
+ .text          0x00000034        0x0 <tmp>\ccgjONvs.o
+ .text.startup  0x00000034       0xb0 <tmp>\ccgjONvs.o
+                0x00000034                main
+
+.rodata         0x000000e4      0x190
+ *(.rodata .rodata.*)
+ .rodata        0x000000e4      0x190 <tmp>\ccgjONvs.o
+ *(.srodata .srodata.*)
+
+.rela.dyn       0x00000274        0x0
+ .rela.text.start
+                0x00000274        0x0 <tmp>\ccsTO2oi.o
+
+.data           0x00000274        0x0
+ *(.data .data.*)
+ .data          0x00000274        0x0 <tmp>\ccsTO2oi.o
+ .data          0x00000274        0x0 <tmp>\ccgjONvs.o
+ *(.sdata .sdata.*)
+
+.bss            0x00000274        0xc
+                0x00000274                        __bss_start = .
+ *(.bss .bss.*)
+ .bss           0x00000274        0x0 <tmp>\ccsTO2oi.o
+ .bss           0x00000274        0xa <tmp>\ccgjONvs.o
+ *(.sbss .sbss.*)
+ *(COMMON)
+                0x00000280                        . = ALIGN (0x4)
+ *fill*         0x0000027e        0x2 
+                0x00000280                        __bss_end = .
+                0x00000280                        . = ALIGN (0x10)
+                0x00000280                        _end = .
+                0x00007ff0                        __stack_top = ((ORIGIN (BRAM) + LENGTH (BRAM)) - 0x10)
+                0x00000001                        ASSERT ((_end < (__stack_top - 0x100)), Firmware and static buffers leave no stack space in BRAM)
+LOAD <tmp>\ccsTO2oi.o
+LOAD <tmp>\ccgjONvs.o
+OUTPUT(.\ecg_vit_smoke.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x1c
+ .riscv.attributes
+                0x00000000       0x1a <tmp>\ccsTO2oi.o
+ .riscv.attributes
+                0x0000001a       0x1c <tmp>\ccgjONvs.o
+
+.comment        0x00000000       0x33
+ .comment       0x00000000       0x33 <tmp>\ccgjONvs.o
+                                 0x34 (size before relaxing)
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 <tmp>\ccgjONvs.o

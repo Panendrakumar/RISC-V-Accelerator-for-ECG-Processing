@@ -1,0 +1,63 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Tue Nov 10 22:36:47 2026
+| Host         : LAPTOP-0N4R25GE running 64-bit major release  (build 9200)
+| Command      : report_clocks -file V:/02_Vivado_Zybo/v2_interactive/reports/clocks.rpt
+| Design       : zybo_vit_v2_top
+| Device       : 7z010-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Clock Report
+
+
+Attributes
+  P: Propagated
+  G: Generated
+  A: Auto-derived
+  R: Renamed
+  V: Virtual
+  I: Inverted
+  S: Pin phase-shifted with Latency mode
+
+Clock                                                                                       Period(ns)  Waveform(ns)    Attributes  Sources
+dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK  33.000      {0.000 16.500}  P           {dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK}
+sysclk                                                                                      8.000       {0.000 4.000}   P           {sysclk}
+clk_out1_ecg_vit_system_clk_wiz_0_0                                                         10.000      {0.000 5.000}   P,G,A       {system_i/ecg_vit_system_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0}
+clkfbout_ecg_vit_system_clk_wiz_0_0                                                         8.000       {0.000 4.000}   P,G,A       {system_i/ecg_vit_system_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBOUT}
+
+
+====================================================
+Generated Clocks
+====================================================
+
+Generated Clock     : clk_out1_ecg_vit_system_clk_wiz_0_0
+Master Source       : system_i/ecg_vit_system_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+Master Clock        : sysclk
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 1.000 2.000}
+Generated Sources   : {system_i/ecg_vit_system_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0}
+
+Generated Clock     : clkfbout_ecg_vit_system_clk_wiz_0_0
+Master Source       : system_i/ecg_vit_system_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+Master Clock        : sysclk
+Multiply By         : 1
+Generated Sources   : {system_i/ecg_vit_system_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBOUT}
+
+
+
+====================================================
+User Uncertainty
+====================================================
+
+
+
+====================================================
+User Jitter
+====================================================
+
+Clock   Jitter(ns)
+sysclk  0.080
+

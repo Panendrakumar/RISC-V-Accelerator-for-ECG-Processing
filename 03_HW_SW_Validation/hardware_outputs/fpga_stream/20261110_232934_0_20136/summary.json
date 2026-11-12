@@ -1,0 +1,73 @@
+{
+  "what_this_is": "FPGA (Zybo Z7-10, v2 bitstream) predictions on a sample of the saved beat-level test split. Beats sent over JTAG-to-AXI; class computed by the on-board accelerator.",
+  "test_rows": [
+    0,
+    20135
+  ],
+  "is_full_test_set": true,
+  "beats_requested": 20136,
+  "beats_completed": 20136,
+  "failures": [],
+  "support": {
+    "N": 18015,
+    "S": 556,
+    "V": 1401,
+    "F": 161,
+    "Q": 3
+  },
+  "fpga_accuracy_vs_true": 0.9864421930870083,
+  "fpga_macro_f1_vs_true": 0.7244253888038716,
+  "fpga_confusion_rows_true_cols_pred_NSVFQ": [
+    [
+      17894,
+      68,
+      42,
+      10,
+      1
+    ],
+    [
+      61,
+      488,
+      6,
+      1,
+      0
+    ],
+    [
+      22,
+      5,
+      1357,
+      17,
+      0
+    ],
+    [
+      25,
+      0,
+      12,
+      124,
+      0
+    ],
+    [
+      1,
+      0,
+      2,
+      0,
+      0
+    ]
+  ],
+  "agreement_fpga_vs_q610_python": 0.9999503377036154,
+  "agreement_fpga_vs_fp32_checkpoint": 0.9997020262216925,
+  "fp32_accuracy_on_same_sample": 0.9863428684942391,
+  "q610_python_accuracy_on_same_sample": 0.9863925307906237,
+  "max_abs_logit_diff_fpga_vs_q610_python_raw": 183,
+  "cycles_mean": 3128914.648092968,
+  "cycles_min": 3128910,
+  "cycles_max": 3128998,
+  "latency_ms_mean_at_100MHz": 31.28914648092968,
+  "wall_clock_seconds": 1645.1,
+  "seconds_per_beat_including_jtag": 0.082,
+  "caveats": [
+    "Beat-level split, not patient-independent.",
+    "Macro-F1 on a sample depends on how many rare-class beats (F, Q) it contains; see support.",
+    "Python Q6.10 reference approximates the HLS arithmetic; small raw-logit differences are expected."
+  ]
+}

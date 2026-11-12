@@ -1,0 +1,94 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Total Instructions per Compilation Phase
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Phase         | Step                        | Instructions | Description                                                                            |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Compile/Link  |                             | 9,940        | After all functions are compiled and linked into a single design                       |
+|               |                             |              |                                                                                        |
+| Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                  | 1,705        | user unroll pragmas are applied                                                        |
+|               | (2) simplification          | 1,372        | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                  | 1,303        | user inline pragmas are applied                                                        |
+|               | (4) simplification          |   961        | simplification of applied user inline pragmas                                          |
+|               |                             |              |                                                                                        |
+| Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition         |   948        | user array partition pragmas are applied                                               |
+|               | (2) simplification          |   948        | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate  |   948        | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           |   948        | apply array reshape pragmas                                                            |
+|               | (5) access patterns         |   971        | array access pattern optmizations                                                      |
+|               |                             |              |                                                                                        |
+| Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
+|               | (1) loop simplification     |   951        | loop and instruction simplification                                                    |
+|               | (2) parallelization         |   951        | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition         |   951        | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          |   951        | simplification of design after performance transformations                             |
+|               |                             |              |                                                                                        |
+| HW Transforms |                             |              | After hardware transfomations                                                          |
+|               | (1) lowering                |   961        | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           | 1,086        | high level synthesis optimizations                                                     |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+
+* Instructions per Function for each Compilation Phase
++-----------------------------------+----------------------+-----------------+---------------+---------------+---------------+----------------+
+| Function                          | Location             | Compile/Link    | Unroll/Inline | Array/Struct  | Performance   | HW Transforms  |
++-----------------------------------+----------------------+-----------------+---------------+---------------+---------------+----------------+
+| + vit_inference                   | vit_inference.cpp:68 | 9,940           | 961           | 971           | 951           | 1,086          |
+|  + layer_norm                     | vit_inference.cpp:22 |  240 (3 calls)  | 144 (3 calls) | 150 (3 calls) | 144 (3 calls) |  180 (3 calls) |
+|     sqrtf                         | sqrtfloat.cpp:11     |    6 (3 calls)  |               |               |               |                |
+|  + expf                           | expfloat.cpp:20      |    4            |               |               |               |                |
+|     exp                           | hls_exp_float.cpp:15 |    2            |               |               |               |                |
+|  + dense_patch                    | vit_inference.cpp:41 | 4,544           |               |               |               |                |
+|   + gelu_exact                    | vit_inference.cpp:18 | 4,494           |               |               |               |                |
+|    + erff                         | erffloat.cpp:10      | 4,488           |               |               |               |                |
+|     + erf                         | erffloat.cpp:6       | 4,486           |               |               |               |                |
+|      + generic_erf<float>         | hls_erf.h:429        | 4,484           |               |               |               |                |
+|         fp_struct                 | x_hls_utils.h:283    |  622 (2 calls)  |               |               |               |                |
+|         data                      | x_hls_utils.h:309    |  548 (2 calls)  |               |               |               |                |
+|       + generic_fpclassify<float> | hls_fpclassify.h:37  |  446            |               |               |               |                |
+|          fp_struct                | x_hls_utils.h:283    |  311            |               |               |               |                |
+|       + generic_fabs<float>       | hls_fabs.h:12        | 1,872 (2 calls) |               |               |               |                |
+|        + generic_copysign<float>  | hls_copysign.h:10    | 1,868 (2 calls) |               |               |               |                |
+|           fp_struct               | x_hls_utils.h:283    | 1,244 (4 calls) |               |               |               |                |
+|         + to_ieee                 | x_hls_utils.h:346    |  588 (2 calls)  |               |               |               |                |
+|          + to_float               | x_hls_utils.h:322    |  584 (2 calls)  |               |               |               |                |
+|             data                  | x_hls_utils.h:309    |  548 (2 calls)  |               |               |               |                |
+|         fp_struct                 | x_hls_utils.h:298    |  281            |               |               |               |                |
+|       + to_ieee                   | x_hls_utils.h:346    |  294            |               |               |               |                |
+|        + to_float                 | x_hls_utils.h:322    |  292            |               |               |               |                |
+|           data                    | x_hls_utils.h:309    |  274            |               |               |               |                |
+|         exp                       | hls_exp_float.cpp:15 |    4 (2 calls)  |               |               |               |                |
+|  + dense_patch_back               | vit_inference.cpp:53 | 4,544           |               |               |               |                |
+|   + gelu_exact                    | vit_inference.cpp:18 | 4,494           |               |               |               |                |
+|    + erff                         | erffloat.cpp:10      | 4,488           |               |               |               |                |
+|     + erf                         | erffloat.cpp:6       | 4,486           |               |               |               |                |
+|      + generic_erf<float>         | hls_erf.h:429        | 4,484           |               |               |               |                |
+|         fp_struct                 | x_hls_utils.h:283    |  622 (2 calls)  |               |               |               |                |
+|         data                      | x_hls_utils.h:309    |  548 (2 calls)  |               |               |               |                |
+|       + generic_fpclassify<float> | hls_fpclassify.h:37  |  446            |               |               |               |                |
+|          fp_struct                | x_hls_utils.h:283    |  311            |               |               |               |                |
+|       + generic_fabs<float>       | hls_fabs.h:12        | 1,872 (2 calls) |               |               |               |                |
+|        + generic_copysign<float>  | hls_copysign.h:10    | 1,868 (2 calls) |               |               |               |                |
+|           fp_struct               | x_hls_utils.h:283    | 1,244 (4 calls) |               |               |               |                |
+|         + to_ieee                 | x_hls_utils.h:346    |  588 (2 calls)  |               |               |               |                |
+|          + to_float               | x_hls_utils.h:322    |  584 (2 calls)  |               |               |               |                |
+|             data                  | x_hls_utils.h:309    |  548 (2 calls)  |               |               |               |                |
+|         fp_struct                 | x_hls_utils.h:298    |  281            |               |               |               |                |
+|       + to_ieee                   | x_hls_utils.h:346    |  294            |               |               |               |                |
+|        + to_float                 | x_hls_utils.h:322    |  292            |               |               |               |                |
+|           data                    | x_hls_utils.h:309    |  274            |               |               |               |                |
+|         exp                       | hls_exp_float.cpp:15 |    4 (2 calls)  |               |               |               |                |
+|    generic_erf<float>             | hls_erf.h:429        |                 | 424 (2 calls) | 412 (2 calls) | 412 (2 calls) |  412 (2 calls) |
++-----------------------------------+----------------------+-----------------+---------------+---------------+---------------+----------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

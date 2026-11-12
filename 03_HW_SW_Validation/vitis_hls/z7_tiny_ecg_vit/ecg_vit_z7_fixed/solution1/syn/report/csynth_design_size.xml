@@ -1,0 +1,60 @@
+<design_size title="Design Size Report">
+    <item name="Total Instructions per Compilation Phase">
+        <table>
+            <keys size="4">Phase, Step, Instructions, Description</keys>
+            <column name="Compile/Link">, 69106, After all functions are compiled and linked into a single design</column>
+            <column name="">, , </column>
+            <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
+            <column name="">(1) unroll, 17084, user unroll pragmas are applied</column>
+            <column name="">(2) simplification,  7401, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline,  6393, user inline pragmas are applied</column>
+            <column name="">(4) simplification,  6125, simplification of applied user inline pragmas</column>
+            <column name="">, , </column>
+            <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(1) array partition,  6062, user array partition pragmas are applied</column>
+            <column name="">(2) simplification,  6062, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate ,  6062, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape,  6062, apply array reshape pragmas</column>
+            <column name="">(5) access patterns,  6085, array access pattern optmizations</column>
+            <column name="">, , </column>
+            <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
+            <column name="">(1) loop simplification,  6038, loop and instruction simplification</column>
+            <column name="">(2) parallelization,  6023, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition,  6023, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification,  6023, simplification of design after performance transformations</column>
+            <column name="">, , </column>
+            <column name="HW Transforms">, , After hardware transfomations</column>
+            <column name="">(1) lowering,  6029, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations,  6133, high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
+            <rows>
+                <row id="0" col0="vit_inference_fixed" col1="vit_inference_fixed.cpp:93" col2="69106" col3="6125" col4="6085" col5="6023" col6="6133">
+                    <row id="30" col0="decode_q10" col1="vit_inference_fixed.cpp:17" col2="102" col2_disp="  102 (3 calls)" col3="" col4="" col5="" col6=""/>
+                    <row id="32" col0="layer_norm" col1="vit_inference_fixed.cpp:50" col2="31257" col2_disp="31,257 (3 calls)" col3="3903" col3_disp="3,903 (3 calls)" col4="3849" col4_disp="3,849 (3 calls)" col5="3825" col5_disp="3,825 (3 calls)" col6="3855" col6_disp="3,855 (3 calls)">
+                        <row id="25" col0="sqrt_fixed&lt;17, 7&gt;" col1="hls_sqrt_apfixed.h:16" col2="" col3="2907" col3_disp="2,907 (3 calls)" col4="2847" col4_disp="2,847 (3 calls)" col5="2844" col5_disp="2,844 (3 calls)" col6="2847" col6_disp="2,847 (3 calls)"/>
+                    </row>
+                    <row id="3" col0="exp_lut" col1="vit_inference_fixed.cpp:39" col2="7054" col3="210" col4="210" col5="209" col6="209"/>
+                    <row id="16" col0="dense1" col1="vit_inference_fixed.cpp:70" col2="7242" col3="326" col4="327" col5="318" col6="324">
+                        <row id="13" col0="gelu_lut" col1="vit_inference_fixed.cpp:28" col2="6332" col3="210" col4="210" col5="209" col6="209"/>
+                    </row>
+                    <row id="8" col0="dense2" col1="vit_inference_fixed.cpp:81" col2="7242" col3="326" col4="327" col5="318" col6="324">
+                        <row id="13" col0="gelu_lut" col1="vit_inference_fixed.cpp:28" col2="6332" col3="210" col4="210" col5="209" col6="209"/>
+                    </row>
+                    <row id="1" col0="encode_q10" col1="vit_inference_fixed.cpp:23" col2="49" col3="" col4="" col5="" col6=""/>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

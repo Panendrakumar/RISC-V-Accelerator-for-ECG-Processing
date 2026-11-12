@@ -1,0 +1,42 @@
+# Python (rebuild: python -m venv .venv ; pip install -r requirements.txt)
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+*.egg-info/
+
+# Vivado / Vitis generated output (recreated by the build_*.tcl scripts)
+*.cache/
+*.gen/
+*.runs/
+*.sim/
+*.hw/
+*.ip_user_files/
+.Xil/
+*.dcp
+*.rpx
+*.jou
+vivado*.log
+vivado*.str
+webtalk*
+hs_err_pid*
+
+# Large or re-downloadable data
+# MIT-BIH records: download with wfdb (PhysioNet) as the notebook does
+physionet.org/
+# 154 MB split file (above GitHub's 100 MB limit); recreated by the training notebook
+consistent_data_splits.npz
+*.zip
+*.tar
+
+# Editor / OS junk
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
+~$*
+*.tmp

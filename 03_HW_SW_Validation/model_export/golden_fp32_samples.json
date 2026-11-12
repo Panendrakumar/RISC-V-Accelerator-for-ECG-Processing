@@ -1,0 +1,58 @@
+{
+  "source_checkpoint": "04_Model_Software\\third_party_models\\TinyTransformer\\software\\training_attempt_20261024\\baseline_ecg_transformer.weights.h5",
+  "source_results": "04_Model_Software\\third_party_models\\TinyTransformer\\software\\training_attempt_20261024\\baseline_results.json",
+  "source_split": "04_Model_Software\\third_party_models\\TinyTransformer\\software\\consistent_data_splits.npz",
+  "source_accuracy": 0.9863428684942391,
+  "source_macro_f1": 0.7243886425566272,
+  "classes_in_output_order": [
+    "N",
+    "S",
+    "V",
+    "F",
+    "Q"
+  ],
+  "input_shapes": {
+    "ecg_samples": [
+      198
+    ],
+    "rr_features": [
+      2
+    ]
+  },
+  "sample_count": 9,
+  "test_indices": [
+    0,
+    1,
+    7,
+    41,
+    4,
+    32,
+    201,
+    483,
+    1393
+  ],
+  "true_classes": [
+    "N",
+    "N",
+    "S",
+    "S",
+    "V",
+    "V",
+    "F",
+    "F",
+    "Q"
+  ],
+  "checkpoint_predictions": [
+    "N",
+    "N",
+    "S",
+    "S",
+    "V",
+    "V",
+    "F",
+    "F",
+    "N"
+  ],
+  "quantized": false,
+  "note": "FP32 reference vectors only; not hardware outputs or INT8 accuracy evidence."
+}

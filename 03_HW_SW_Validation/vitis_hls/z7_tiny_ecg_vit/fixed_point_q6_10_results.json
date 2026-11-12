@@ -1,0 +1,51 @@
+{
+  "format": "Q6.10 weights and activations with Q12.20 accumulators",
+  "test_count": 20136,
+  "accuracy": 0.9863925307906237,
+  "macro_f1": 0.7242634911045405,
+  "confusion_matrix": [
+    [
+      17893,
+      69,
+      42,
+      10,
+      1
+    ],
+    [
+      61,
+      488,
+      6,
+      1,
+      0
+    ],
+    [
+      22,
+      5,
+      1357,
+      17,
+      0
+    ],
+    [
+      25,
+      0,
+      12,
+      124,
+      0
+    ],
+    [
+      1,
+      0,
+      2,
+      0,
+      0
+    ]
+  ],
+  "classes": [
+    "N",
+    "S",
+    "V",
+    "F",
+    "Q"
+  ],
+  "note": "Software fixed-point approximation only; it is not an FPGA measurement."
+}

@@ -1,0 +1,283 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z010clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10.0 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_compile -pipeline_loops 0 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 21.05 seconds; current allocated memory: 0.926 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.085 seconds; current allocated memory: 94.836 MB.
+INFO: [HLS 200-10] Analyzing design file 'vit_inference_fixed.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 25.243 seconds; current allocated memory: 102.133 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 69,106 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: R:/03_HW_SW_Validation/vitis_hls/z7_tiny_ecg_vit/ecg_vit_z7_fixed/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 17,084 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: R:/03_HW_SW_Validation/vitis_hls/z7_tiny_ecg_vit/ecg_vit_z7_fixed/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 7,401 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: R:/03_HW_SW_Validation/vitis_hls/z7_tiny_ecg_vit/ecg_vit_z7_fixed/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 6,393 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: R:/03_HW_SW_Validation/vitis_hls/z7_tiny_ecg_vit/ecg_vit_z7_fixed/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 6,125 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: R:/03_HW_SW_Validation/vitis_hls/z7_tiny_ecg_vit/ecg_vit_z7_fixed/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 6,062 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: R:/03_HW_SW_Validation/vitis_hls/z7_tiny_ecg_vit/ecg_vit_z7_fixed/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 6,062 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: R:/03_HW_SW_Validation/vitis_hls/z7_tiny_ecg_vit/ecg_vit_z7_fixed/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 6,062 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: R:/03_HW_SW_Validation/vitis_hls/z7_tiny_ecg_vit/ecg_vit_z7_fixed/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 6,062 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: R:/03_HW_SW_Validation/vitis_hls/z7_tiny_ecg_vit/ecg_vit_z7_fixed/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 6,085 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: R:/03_HW_SW_Validation/vitis_hls/z7_tiny_ecg_vit/ecg_vit_z7_fixed/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 6,038 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: R:/03_HW_SW_Validation/vitis_hls/z7_tiny_ecg_vit/ecg_vit_z7_fixed/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 6,023 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: R:/03_HW_SW_Validation/vitis_hls/z7_tiny_ecg_vit/ecg_vit_z7_fixed/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 6,023 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: R:/03_HW_SW_Validation/vitis_hls/z7_tiny_ecg_vit/ecg_vit_z7_fixed/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 6,023 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: R:/03_HW_SW_Validation/vitis_hls/z7_tiny_ecg_vit/ecg_vit_z7_fixed/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 6,029 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: R:/03_HW_SW_Validation/vitis_hls/z7_tiny_ecg_vit/ecg_vit_z7_fixed/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 6,133 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: R:/03_HW_SW_Validation/vitis_hls/z7_tiny_ecg_vit/ecg_vit_z7_fixed/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_268_2' is marked as complete unroll implied by the pipeline pragma (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_sqrt_apfixed.h:268:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_240_1' is marked as complete unroll implied by the pipeline pragma (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_sqrt_apfixed.h:240:27)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_268_2' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_sqrt_apfixed.h:268:27) in function 'sqrt_fixed<17, 7>' completely with a factor of 11 (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_sqrt_apfixed.h:17:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_240_1' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_sqrt_apfixed.h:240:27) in function 'sqrt_fixed<17, 7>' completely with a factor of 4 (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_sqrt_apfixed.h:17:0)
+INFO: [HLS 214-178] Inlining function 'ap_fixed<17, 7, (ap_q_mode)5, (ap_o_mode)3, 0> hls::sqrt<17, 7>(ap_fixed<17, 7, (ap_q_mode)5, (ap_o_mode)3, 0>)' into '(anonymous namespace)::layer_norm(ap_fixed<16, 6, (ap_q_mode)4, (ap_o_mode)0, 0> const (*) [16], ap_fixed<16, 6, (ap_q_mode)4, (ap_o_mode)0, 0> (*) [16], ap_fixed<16, 6, (ap_q_mode)4, (ap_o_mode)0, 0> const*, ap_fixed<16, 6, (ap_q_mode)4, (ap_o_mode)0, 0> const*)' (vit_inference_fixed.cpp:51:0)
+INFO: [HLS 214-178] Inlining function '(anonymous namespace)::decode_q10(ap_int<16>)' into 'vit_inference_fixed' (vit_inference_fixed.cpp:95:0)
+INFO: [HLS 214-178] Inlining function '(anonymous namespace)::encode_q10(ap_fixed<16, 6, (ap_q_mode)4, (ap_o_mode)0, 0>)' into 'vit_inference_fixed' (vit_inference_fixed.cpp:95:0)
+INFO: [HLS 214-115] Multiple burst reads of length 3 and bit width 16 in loop 'VITIS_LOOP_120_3'(vit_inference_fixed.cpp:120:31) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (vit_inference_fixed.cpp:120:31)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 16 has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (vit_inference_fixed.cpp:203:26)
+INFO: [HLS 214-115] Multiple burst writes of length 5 and bit width 16 in loop 'VITIS_LOOP_208_25'(vit_inference_fixed.cpp:208:24) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (vit_inference_fixed.cpp:208:24)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 8.407 seconds; current allocated memory: 103.352 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 103.352 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.217 seconds; current allocated memory: 113.953 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.167 seconds; current allocated memory: 118.176 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (vit_inference_fixed.cpp:122:29) to (vit_inference_fixed.cpp:118:27) in function 'vit_inference_fixed'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (vit_inference_fixed.cpp:140:30) to (vit_inference_fixed.cpp:130:31) in function 'vit_inference_fixed'... converting 7 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (vit_inference_fixed.cpp:158:34) to (vit_inference_fixed.cpp:154:32) in function 'vit_inference_fixed'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (vit_inference_fixed.cpp:171:23) to (vit_inference_fixed.cpp:172:36) in function 'vit_inference_fixed'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (vit_inference_fixed.cpp:175:45) to (vit_inference_fixed.cpp:176:37) in function 'vit_inference_fixed'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (vit_inference_fixed.cpp:169:50) to (vit_inference_fixed.cpp:170:32) in function 'vit_inference_fixed'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (vit_inference_fixed.cpp:198:29) to (vit_inference_fixed.cpp:194:24) in function 'vit_inference_fixed'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (vit_inference_fixed.cpp:211:36) to (vit_inference_fixed.cpp:208:24) in function 'vit_inference_fixed'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (vit_inference_fixed.cpp:203:26) to (vit_inference_fixed.cpp:208:24) in function 'vit_inference_fixed'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_sqrt_apfixed.h:346:1) in function 'sqrt_fixed<17, 7>'... converting 70 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (vit_inference_fixed.cpp:65:35) to (vit_inference_fixed.cpp:65:26) in function '(anonymous namespace)::layer_norm'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (vit_inference_fixed.cpp:55:28) to (vit_inference_fixed.cpp:58:26) in function '(anonymous namespace)::layer_norm'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (vit_inference_fixed.cpp:62:41) to (vit_inference_fixed.cpp:65:26) in function '(anonymous namespace)::layer_norm'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (vit_inference_fixed.cpp:29:11) to (vit_inference_fixed.cpp:37:1) in function '(anonymous namespace)::gelu_lut'... converting 9 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (vit_inference_fixed.cpp:40:11) to (vit_inference_fixed.cpp:48:1) in function '(anonymous namespace)::exp_lut'... converting 11 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (vit_inference_fixed.cpp:87:34) to (vit_inference_fixed.cpp:83:26) in function '(anonymous namespace)::dense2'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (vit_inference_fixed.cpp:76:34) to (vit_inference_fixed.cpp:72:26) in function '(anonymous namespace)::dense1'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.912 seconds; current allocated memory: 146.355 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.47 seconds; current allocated memory: 203.207 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'vit_inference_fixed' ...
+WARNING: [SYN 201-103] Legalizing function name 'sqrt_fixed<17, 7>' to 'sqrt_fixed_17_7_s'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)layer_norm' to 'p_anonymous_namespace_layer_norm'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)exp_lut' to 'p_anonymous_namespace_exp_lut'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)gelu_lut' to 'p_anonymous_namespace_gelu_lut'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)dense1' to 'p_anonymous_namespace_dense1'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)dense2' to 'p_anonymous_namespace_dense2'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sqrt_fixed_17_7_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'sqrt_fixed<17, 7>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 9, function 'sqrt_fixed<17, 7>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.551 seconds; current allocated memory: 213.480 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.112 seconds; current allocated memory: 215.059 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_layer_norm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln66) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 215.387 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.105 seconds; current allocated memory: 215.617 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_exp_lut' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.125 seconds; current allocated memory: 215.691 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.072 seconds; current allocated memory: 215.750 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_gelu_lut' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.093 seconds; current allocated memory: 216.305 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.084 seconds; current allocated memory: 216.520 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_dense1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln75_1) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.093 seconds; current allocated memory: 217.445 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.073 seconds; current allocated memory: 218.008 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_dense2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln86_1) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.097 seconds; current allocated memory: 218.812 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.081 seconds; current allocated memory: 218.930 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'vit_inference_fixed' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln121_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln138) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln137) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln136) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln210_1) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.406 seconds; current allocated memory: 230.523 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.238 seconds; current allocated memory: 230.973 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sqrt_fixed_17_7_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sqrt_fixed_17_7_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.277 seconds; current allocated memory: 234.016 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_layer_norm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'am_submul_16s_16s_16s_33_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_16s_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_33s_12ns_44_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'udiv_21s_14ns_21_25_seq_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_layer_norm'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.515 seconds; current allocated memory: 242.137 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_exp_lut' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_12s_16s_28_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_27ns_26ns_52_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_exp_lut'.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_p_anonymous_namespace_exp_lut_EXP_LUT_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.398 seconds; current allocated memory: 248.281 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_gelu_lut' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_15s_16s_31_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_gelu_lut'.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_p_anonymous_namespace_gelu_lut_GELU_LUT_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.239 seconds; current allocated memory: 250.816 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_dense1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_12s_16s_32s_33_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_dense1'.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_p_anonymous_namespace_dense1_B_FF1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_p_anonymous_namespace_dense1_W_FF1_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.246 seconds; current allocated memory: 252.566 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_dense2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_13s_16s_32s_33_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_dense2'.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_p_anonymous_namespace_dense2_B_FF2_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_p_anonymous_namespace_dense2_W_FF2_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.256 seconds; current allocated memory: 255.625 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'vit_inference_fixed' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vit_inference_fixed/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vit_inference_fixed/ecg_q10' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vit_inference_fixed/rr_q10' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vit_inference_fixed/logits_q10' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'vit_inference_fixed' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'ecg_q10', 'rr_q10', 'logits_q10' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_11s_16s_32s_33_4_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_12s_16s_32s_33_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_13s_16s_32s_33_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_12s_16s_28_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_11ns_27_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_12ns_28_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_12s_28_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_13s_29_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_16s_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_16s_48_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_52s_54ns_105_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sdiv_42ns_32s_42_46_seq_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'vit_inference_fixed'.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_B_CONV_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_W_CONV_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_W_POS_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_GAMMA_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_BETA_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_B_Q_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_B_K_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_B_V_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_W_Q_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_W_K_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_W_V_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_W_O_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_B_O_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_GAMMA_2_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_BETA_2_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_GAMMA_OUT_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_BETA_OUT_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_B_HEAD_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'vit_inference_fixed_W_HEAD_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'vit_inference_fixed_patches_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'vit_inference_fixed_hidden_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'vit_inference_fixed_scores_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'vit_inference_fixed_pooled_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'vit_inference_fixed_combined_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.01 seconds; current allocated memory: 267.660 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 3.3 seconds; current allocated memory: 290.383 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 2.31 seconds; current allocated memory: 301.020 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for vit_inference_fixed.
+INFO: [VLOG 209-307] Generating Verilog RTL for vit_inference_fixed.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 7 seconds. CPU system time: 3 seconds. Elapsed time: 46.704 seconds; current allocated memory: 206.559 MB.
+INFO: [HLS 200-1510] Running: export_design -format ip_catalog -rtl verilog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file ecg_vit_z7_fixed/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 20.991 seconds; current allocated memory: 4.633 MB.

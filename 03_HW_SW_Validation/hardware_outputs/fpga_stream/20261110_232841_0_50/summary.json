@@ -1,0 +1,73 @@
+{
+  "what_this_is": "FPGA (Zybo Z7-10, v2 bitstream) predictions on a sample of the saved beat-level test split. Beats sent over JTAG-to-AXI; class computed by the on-board accelerator.",
+  "test_rows": [
+    0,
+    49
+  ],
+  "is_full_test_set": false,
+  "beats_requested": 50,
+  "beats_completed": 50,
+  "failures": [],
+  "support": {
+    "N": 44,
+    "S": 3,
+    "V": 3,
+    "F": 0,
+    "Q": 0
+  },
+  "fpga_accuracy_vs_true": 1.0,
+  "fpga_macro_f1_vs_true": 0.6,
+  "fpga_confusion_rows_true_cols_pred_NSVFQ": [
+    [
+      44,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      3,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      3,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "agreement_fpga_vs_q610_python": 1.0,
+  "agreement_fpga_vs_fp32_checkpoint": 1.0,
+  "fp32_accuracy_on_same_sample": 1.0,
+  "q610_python_accuracy_on_same_sample": 1.0,
+  "max_abs_logit_diff_fpga_vs_q610_python_raw": 19,
+  "cycles_mean": 3128913.9,
+  "cycles_min": 3128910,
+  "cycles_max": 3128921,
+  "latency_ms_mean_at_100MHz": 31.289139,
+  "wall_clock_seconds": 39.6,
+  "seconds_per_beat_including_jtag": 0.791,
+  "caveats": [
+    "Beat-level split, not patient-independent.",
+    "Macro-F1 on a sample depends on how many rare-class beats (F, Q) it contains; see support.",
+    "Python Q6.10 reference approximates the HLS arithmetic; small raw-logit differences are expected."
+  ]
+}

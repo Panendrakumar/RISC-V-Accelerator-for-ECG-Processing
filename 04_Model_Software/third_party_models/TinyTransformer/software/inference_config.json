@@ -1,0 +1,79 @@
+{
+  "model_name": "Tiny ECG Transformer baseline",
+  "notebook_builder": "build_baseline_ViT",
+  "execution_mode": "inference_only",
+  "training_enabled": false,
+  "checkpoint_file": "training_attempt_20261024/baseline_ecg_transformer.weights.h5",
+  "results_file": "training_attempt_20261024/baseline_results.json",
+  "expected_parameter_count": 6643,
+  "architecture": {
+    "attention_heads": 8,
+    "key_dimension_per_head": 2,
+    "embedding_dimension": 16,
+    "feed_forward_dimension": 128,
+    "encoder_layers": 1,
+    "conv1d_kernel": 3,
+    "conv1d_stride": 3
+  },
+  "inference_batch_size": 128,
+  "input": {
+    "ecg_samples_per_beat": 198,
+    "samples_before_r_peak": 99,
+    "samples_after_r_peak": 98,
+    "window_slice": "[r_peak - 99 : r_peak + 99] (end-exclusive; R peak at index 99)",
+    "rr_features": ["pre_rr_seconds", "post_rr_seconds"],
+    "sampling_rate_hz": 360
+  },
+  "preprocessing": {
+    "bandpass_hz": [0.5, 40.0],
+    "butterworth_order": 5,
+    "normalization": "per_record_zero_mean_unit_variance"
+  },
+  "classes_in_output_order": ["N", "S", "V", "F", "Q"],
+  "dataset": "MIT-BIH Arrhythmia Database",
+  "split": {
+    "type": "stratified_beat_level",
+    "train_fraction": 0.7,
+    "validation_fraction": 0.1,
+    "test_fraction": 0.2,
+    "random_seed": 42,
+    "archive_file": "consistent_data_splits.npz"
+  },
+  "local_dataset_class_counts": {
+    "N": 90070,
+    "S": 2779,
+    "V": 7008,
+    "F": 802,
+    "Q": 15
+  },
+  "local_test_class_counts": {
+    "N": 18015,
+    "S": 556,
+    "V": 1401,
+    "F": 161,
+    "Q": 3
+  },
+  "accuracy_target": 0.98,
+  "upstream_reported_accuracy": 0.9883,
+  "local_checkpoint_accuracy": 0.9863428685,
+  "local_checkpoint_macro_f1": 0.7243886426,
+  "local_best_validation_accuracy": 0.9870865345,
+  "local_best_validation_epoch": 75,
+  "training_attempt": {
+    "attempts": 1,
+    "completed": true,
+    "trained_from_scratch": true,
+    "epochs": 100,
+    "batch_size": 128,
+    "learning_rate": 0.002,
+    "early_stopping_patience": 25,
+    "random_seed": 42
+  },
+  "notes": [
+    "The local test accuracy is measured on the preserved stratified beat-level split; it is not patient-independent.",
+    "The test set has three Q beats and Q-class F1 is zero; report per-class results with accuracy.",
+    "The upstream 98.83% and original paper 98.97% are separate reference results.",
+    "Q6.10 fixed-point software reference: accuracy 0.986393, macro-F1 0.7243 (03_HW_SW_Validation/vitis_hls/z7_tiny_ecg_vit/).",
+    "FPGA on the Zybo Z7-10, all 20,136 test beats: accuracy 0.986442, macro-F1 0.724425, 31.29 ms per beat at 100 MHz (03_HW_SW_Validation/hardware_outputs/fpga_stream/20261110_232934_0_20136/)."
+  ]
+}

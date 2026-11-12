@@ -1,0 +1,70 @@
+
+There are no discarded input sections
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+BRAM             0x00000000         0x00008000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.text           0x00000000      0x27c
+ *(.text.start)
+ .text.start    0x00000000       0x34 <tmp>\ccWxKGC8.o
+                0x00000000                _start
+ *(.text .text.*)
+ .text          0x00000034        0x0 <tmp>\ccWxKGC8.o
+ .text          0x00000034       0x6c <tmp>\ccFYeo8f.o
+ .text.startup  0x000000a0      0x1dc <tmp>\ccFYeo8f.o
+                0x000000a0                main
+
+.rodata         0x0000027c      0xe1c
+ *(.rodata .rodata.*)
+ .rodata        0x0000027c      0xe1c <tmp>\ccFYeo8f.o
+ *(.srodata .srodata.*)
+
+.rela.dyn       0x00001098        0x0
+ .rela.text.start
+                0x00001098        0x0 <tmp>\ccWxKGC8.o
+
+.data           0x00001098        0x0
+ *(.data .data.*)
+ .data          0x00001098        0x0 <tmp>\ccWxKGC8.o
+ .data          0x00001098        0x0 <tmp>\ccFYeo8f.o
+ *(.sdata .sdata.*)
+
+.bss            0x00001098        0xc
+                0x00001098                        __bss_start = .
+ *(.bss .bss.*)
+ .bss           0x00001098        0x0 <tmp>\ccWxKGC8.o
+ .bss           0x00001098        0xa <tmp>\ccFYeo8f.o
+ *(.sbss .sbss.*)
+ *(COMMON)
+                0x000010a4                        . = ALIGN (0x4)
+ *fill*         0x000010a2        0x2 
+                0x000010a4                        __bss_end = .
+                0x000010b0                        . = ALIGN (0x10)
+                0x000010b0                        _end = .
+                0x00007ff0                        __stack_top = ((ORIGIN (BRAM) + LENGTH (BRAM)) - 0x10)
+                0x00000001                        ASSERT ((_end < (__stack_top - 0x100)), Firmware and static buffers leave no stack space in BRAM)
+LOAD <tmp>\ccWxKGC8.o
+LOAD <tmp>\ccFYeo8f.o
+OUTPUT(.\ecg_vit_known_beats.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x1c
+ .riscv.attributes
+                0x00000000       0x1a <tmp>\ccWxKGC8.o
+ .riscv.attributes
+                0x0000001a       0x1c <tmp>\ccFYeo8f.o
+
+.comment        0x00000000       0x33
+ .comment       0x00000000       0x33 <tmp>\ccFYeo8f.o
+                                 0x34 (size before relaxing)
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 <tmp>\ccFYeo8f.o

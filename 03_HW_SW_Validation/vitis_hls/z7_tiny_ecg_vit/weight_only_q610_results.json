@@ -1,0 +1,8 @@
+{
+  "weights": "Q6.10",
+  "activations": "float64 software arithmetic",
+  "test_count": 20136,
+  "accuracy": 0.9863925307906237,
+  "macro_f1": 0.7245958704313855,
+  "note": "Diagnostic software result only; not an FPGA measurement."
+}

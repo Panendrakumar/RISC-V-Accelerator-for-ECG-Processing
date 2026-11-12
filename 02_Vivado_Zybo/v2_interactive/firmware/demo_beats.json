@@ -1,0 +1,149 @@
+{
+  "note": "Switch-selectable demo beats. FPGA output is checked against q610_pred. Not an accuracy sample.",
+  "beats": [
+    {
+      "switch": 0,
+      "switch_binary": "0000",
+      "test_index": 0,
+      "true": "N",
+      "fp32_pred": "N",
+      "q610_pred": "N",
+      "note": "golden self-test beat"
+    },
+    {
+      "switch": 1,
+      "switch_binary": "0001",
+      "test_index": 1,
+      "true": "N",
+      "fp32_pred": "N",
+      "q610_pred": "N",
+      "note": "golden self-test beat"
+    },
+    {
+      "switch": 2,
+      "switch_binary": "0010",
+      "test_index": 7,
+      "true": "S",
+      "fp32_pred": "S",
+      "q610_pred": "S",
+      "note": "golden self-test beat"
+    },
+    {
+      "switch": 3,
+      "switch_binary": "0011",
+      "test_index": 41,
+      "true": "S",
+      "fp32_pred": "S",
+      "q610_pred": "S",
+      "note": "golden self-test beat"
+    },
+    {
+      "switch": 4,
+      "switch_binary": "0100",
+      "test_index": 4,
+      "true": "V",
+      "fp32_pred": "V",
+      "q610_pred": "V",
+      "note": "golden self-test beat"
+    },
+    {
+      "switch": 5,
+      "switch_binary": "0101",
+      "test_index": 32,
+      "true": "V",
+      "fp32_pred": "V",
+      "q610_pred": "V",
+      "note": "golden self-test beat"
+    },
+    {
+      "switch": 6,
+      "switch_binary": "0110",
+      "test_index": 201,
+      "true": "F",
+      "fp32_pred": "F",
+      "q610_pred": "F",
+      "note": "golden self-test beat"
+    },
+    {
+      "switch": 7,
+      "switch_binary": "0111",
+      "test_index": 483,
+      "true": "F",
+      "fp32_pred": "F",
+      "q610_pred": "F",
+      "note": "golden self-test beat"
+    },
+    {
+      "switch": 8,
+      "switch_binary": "1000",
+      "test_index": 1393,
+      "true": "Q",
+      "fp32_pred": "N",
+      "q610_pred": "N",
+      "note": "golden self-test beat"
+    },
+    {
+      "switch": 9,
+      "switch_binary": "1001",
+      "test_index": 353,
+      "true": "S",
+      "fp32_pred": "N",
+      "q610_pred": "N",
+      "note": "S beat the model misses (called N)"
+    },
+    {
+      "switch": 10,
+      "switch_binary": "1010",
+      "test_index": 57,
+      "true": "F",
+      "fp32_pred": "N",
+      "q610_pred": "N",
+      "note": "Fusion beat called N"
+    },
+    {
+      "switch": 11,
+      "switch_binary": "1011",
+      "test_index": 714,
+      "true": "V",
+      "fp32_pred": "F",
+      "q610_pred": "F",
+      "note": "V beat called F"
+    },
+    {
+      "switch": 12,
+      "switch_binary": "1100",
+      "test_index": 59,
+      "true": "N",
+      "fp32_pred": "S",
+      "q610_pred": "S",
+      "note": "Normal beat falsely called S"
+    },
+    {
+      "switch": 13,
+      "switch_binary": "1101",
+      "test_index": 576,
+      "true": "V",
+      "fp32_pred": "N",
+      "q610_pred": "N",
+      "note": "V beat called N"
+    },
+    {
+      "switch": 14,
+      "switch_binary": "1110",
+      "test_index": 2265,
+      "true": "Q",
+      "fp32_pred": "V",
+      "q610_pred": "V",
+      "note": "Paced/unknown (Q) beat - rare class"
+    },
+    {
+      "switch": 15,
+      "switch_binary": "1111",
+      "test_index": 5482,
+      "true": "Q",
+      "fp32_pred": "V",
+      "q610_pred": "V",
+      "note": "Paced/unknown (Q) beat - rare class"
+    }
+  ]
+}

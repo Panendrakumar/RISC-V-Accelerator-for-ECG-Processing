@@ -1,0 +1,17 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../vit_inference_fixed_tb.cpp in debug mode
+   Compiling ../../../../vit_inference_fixed.cpp in debug mode
+   Generating csim.exe
+vector 0 expected=0 fixed=0
+vector 1 expected=0 fixed=0
+vector 2 expected=1 fixed=1
+vector 3 expected=1 fixed=1
+vector 4 expected=2 fixed=2
+vector 5 expected=2 fixed=2
+vector 6 expected=3 fixed=3
+vector 7 expected=3 fixed=3
+vector 8 expected=0 fixed=0
+Fixed-point reference mismatches: 0 / 9
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

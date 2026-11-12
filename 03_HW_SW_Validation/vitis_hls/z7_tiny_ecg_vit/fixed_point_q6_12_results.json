@@ -1,0 +1,52 @@
+﻿{
+    "format":  "Q6.12 weights and activations with Q12.20 accumulators",
+    "test_count":  20136,
+    "accuracy":  0.801797775129122,
+    "macro_f1":  0.4463595312378919,
+    "confusion_matrix":  [
+                             [
+                                 14745,
+                                 1342,
+                                 108,
+                                 18,
+                                 1802
+                             ],
+                             [
+                                 86,
+                                 411,
+                                 26,
+                                 1,
+                                 32
+                             ],
+                             [
+                                 81,
+                                 78,
+                                 965,
+                                 5,
+                                 272
+                             ],
+                             [
+                                 78,
+                                 11,
+                                 18,
+                                 24,
+                                 30
+                             ],
+                             [
+                                 1,
+                                 0,
+                                 2,
+                                 0,
+                                 0
+                             ]
+                         ],
+    "classes":  [
+                    "N",
+                    "S",
+                    "V",
+                    "F",
+                    "Q"
+                ],
+    "note":  "Software fixed-point approximation only; it is not an FPGA measurement.",
+    "status":  "OBSOLETE: preliminary reference predates the LUT-index saturation correction; do not cite as a valid Q6.12 result."
+}

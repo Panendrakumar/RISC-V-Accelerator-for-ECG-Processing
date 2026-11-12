@@ -1,0 +1,108 @@
+<profile>
+
+<ReportVersion>
+<Version>2023.2</Version>
+</ReportVersion>
+
+<UserAssignments>
+<unit>ns</unit>
+<ProductFamily>zynq</ProductFamily>
+<Part>xc7z010-clg400-1</Part>
+<TopModelName>sqrt_fixed_17_7_s</TopModelName>
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>2.70</ClockUncertainty>
+<TargetInitiationInterval>4294967295</TargetInitiationInterval>
+<FlowTarget>vivado</FlowTarget>
+</UserAssignments>
+
+<PerformanceEstimates>
+<PipelineType>yes</PipelineType>
+<SummaryOfTimingAnalysis>
+<unit>ns</unit>
+<EstimatedClockPeriod>7.282</EstimatedClockPeriod>
+</SummaryOfTimingAnalysis>
+<SummaryOfOverallLatency>
+<unit>clock cycles</unit>
+<Best-caseLatency>8</Best-caseLatency>
+<Average-caseLatency>8</Average-caseLatency>
+<Worst-caseLatency>8</Worst-caseLatency>
+<Best-caseRealTimeLatency>80.000 ns</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>80.000 ns</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>80.000 ns</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>1</PipelineInitiationInterval>
+<PipelineDepth>9</PipelineDepth>
+<Interval-min>1</Interval-min>
+<Interval-max>1</Interval-max>
+</SummaryOfOverallLatency>
+<SummaryOfViolations>
+<IssueType>-</IssueType>
+<ViolationType>-</ViolationType>
+<SourceLocation>C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_sqrt_apfixed.h:197</SourceLocation>
+</SummaryOfViolations>
+</PerformanceEstimates>
+
+<AreaEstimates>
+<Resources>
+<FF>481</FF>
+<LUT>1814</LUT>
+<BRAM_18K>0</BRAM_18K>
+<DSP>0</DSP>
+<URAM>0</URAM>
+</Resources>
+<AvailableResources>
+<BRAM_18K>120</BRAM_18K>
+<DSP>80</DSP>
+<FF>35200</FF>
+<LUT>17600</LUT>
+<URAM>0</URAM>
+</AvailableResources>
+</AreaEstimates>
+
+<InterfaceSummary>
+<RtlPorts>
+<name>ap_clk</name>
+<Object>sqrt_fixed&lt;17, 7&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_rst</name>
+<Object>sqrt_fixed&lt;17, 7&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return</name>
+<Object>sqrt_fixed&lt;17, 7&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>14</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>x_val</name>
+<Object>x_val</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>17</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+</InterfaceSummary>
+
+</profile>
